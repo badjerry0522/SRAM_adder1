@@ -1,0 +1,64 @@
+module tb();
+    reg clk;
+    wire zero=0;
+    wire sel,first;
+    wire addr_minus_en;
+
+    wire SRAM_re,SRAM_we;
+    reg [8:0]waddr; reg [31:0] din;
+
+    wire busy;  wire [31:0]S;
+    
+    reg FSM_reset;
+
+
+
+    reg write_mode;
+    FSM FSM1(
+        .clk(clk),
+        .write_mode(write_mode),
+        .zero(zero),
+        .sel(sel), .first(first),
+        .addr_minus_en(addr_minus_en),
+
+        .SRAM_re(SRAM_re), .SRAM_we(SRAM_we),
+
+        .busy(busy),
+        .reset(FSM_reset)
+    );
+
+    SRAM_adder Sa1(
+        .clk(clk),
+        .sel(sel), .first(first),
+        .addr_minus_en(addr_minus_en),
+
+        .SRAM_we(SRAM_we),  .SRAM_re(SRAM_RE),
+        .waddr(waddr),  .din(din),
+
+        .busy(busy),
+        .S(S)
+    );
+    
+    always  begin
+        clk=1; #5; clk=0; #5;
+    end
+
+    integer i;
+    initial begin
+        assign write_mode=1;
+        assign FSM_reset=0;
+
+        
+        assign waddr=1'b0;  assign din=32'b1010; #10;
+        for(i=1;i<=10;i=i+1)begin
+            assign waddr=i;
+            assign din=i;
+            #10;
+        end
+
+        assign write_mode=0;
+        assign FSM_reset=1; #10;
+        assign FSM_reset=0;
+    end
+
+endmodule

@@ -1,0 +1,43 @@
+D:/work/modelsim/SRAM_adder/SRAM.v {1 {vlog -work work -stats=none D:/work/modelsim/SRAM_adder/SRAM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SRAM
+
+Top level modules:
+	SRAM
+
+} {} {}} D:/work/modelsim/SRAM_adder/get_dat.v {1 {vlog -work work -stats=none D:/work/modelsim/SRAM_adder/get_dat.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module get_dat
+
+Top level modules:
+	get_dat
+
+} {} {}} D:/work/modelsim/SRAM_adder/add_dat.v {1 {vlog -work work -stats=none D:/work/modelsim/SRAM_adder/add_dat.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module add_dat
+
+Top level modules:
+	add_dat
+
+} {} {}} D:/work/modelsim/SRAM_adder/tb.vt {1 {vlog -work work -stats=none D:/work/modelsim/SRAM_adder/tb.vt
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} D:/work/modelsim/SRAM_adder/FSM.v {1 {vlog -work work -stats=none D:/work/modelsim/SRAM_adder/FSM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}} D:/work/modelsim/SRAM_adder/SRAM_adder.v {1 {vlog -work work -stats=none D:/work/modelsim/SRAM_adder/SRAM_adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SRAM_adder
+
+Top level modules:
+	SRAM_adder
+
+} {} {}}
